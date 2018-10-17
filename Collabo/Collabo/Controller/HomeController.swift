@@ -72,11 +72,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     ///make sure you're not returning the header as the footer
     if kind == UICollectionView.elementKindSectionHeader {
       let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-      header.backgroundColor = .black
+      header.backgroundColor = .lightGray
       return header
     } else {
       let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath)
-      footer.backgroundColor = .black
+      footer.backgroundColor = .lightGray 
       return footer
   }
 }

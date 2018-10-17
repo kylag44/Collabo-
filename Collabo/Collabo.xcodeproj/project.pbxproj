@@ -11,6 +11,10 @@
 		256C16FE2177D5A300A80BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FD2177D5A300A80BBF /* Assets.xcassets */; };
 		256C17012177D5A300A80BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FF2177D5A300A80BBF /* LaunchScreen.storyboard */; };
 		256C17092177D84600A80BBF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C17082177D84600A80BBF /* HomeController.swift */; };
+		25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */; };
+		25F1B58C2177F21B0061DC5F /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58B2177F21B0061DC5F /* Cells.swift */; };
+		25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */; };
+		88A17BA366314E8244F36439 /* Pods_Collabo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7A372BA4FAEE5F8AEE588 /* Pods_Collabo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,12 @@
 		256C17002177D5A300A80BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		256C17022177D5A300A80BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		256C17082177D84600A80BBF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		25F1B58B2177F21B0061DC5F /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		59E8F5689BCF9ED75127848C /* Pods-Collabo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collabo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Collabo/Pods-Collabo.release.xcconfig"; sourceTree = "<group>"; };
+		7CFF259034DFE91BC844646A /* Pods-Collabo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collabo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Collabo/Pods-Collabo.debug.xcconfig"; sourceTree = "<group>"; };
+		B1E7A372BA4FAEE5F8AEE588 /* Pods_Collabo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collabo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A17BA366314E8244F36439 /* Pods_Collabo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +49,8 @@
 			children = (
 				256C16F52177D5A200A80BBF /* Collabo */,
 				256C16F42177D5A200A80BBF /* Products */,
+				B834CE9D4D51DA0054F1F6BC /* Pods */,
+				B1AFD3297C7554F33FE3BFA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +65,57 @@
 		256C16F52177D5A200A80BBF /* Collabo */ = {
 			isa = PBXGroup;
 			children = (
-				256C16F62177D5A200A80BBF /* AppDelegate.swift */,
-				256C17082177D84600A80BBF /* HomeController.swift */,
+				25F1B5882177F1910061DC5F /* Model */,
+				25F1B58A2177F19F0061DC5F /* Controller */,
+				25F1B5892177F1990061DC5F /* View */,
 				256C16FD2177D5A300A80BBF /* Assets.xcassets */,
 				256C16FF2177D5A300A80BBF /* LaunchScreen.storyboard */,
 				256C17022177D5A300A80BBF /* Info.plist */,
 			);
 			path = Collabo;
+			sourceTree = "<group>";
+		};
+		25F1B5882177F1910061DC5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				256C16F62177D5A200A80BBF /* AppDelegate.swift */,
+				25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25F1B5892177F1990061DC5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25F1B58B2177F21B0061DC5F /* Cells.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25F1B58A2177F19F0061DC5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				256C17082177D84600A80BBF /* HomeController.swift */,
+				25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1AFD3297C7554F33FE3BFA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7A372BA4FAEE5F8AEE588 /* Pods_Collabo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B834CE9D4D51DA0054F1F6BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CFF259034DFE91BC844646A /* Pods-Collabo.debug.xcconfig */,
+				59E8F5689BCF9ED75127848C /* Pods-Collabo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 256C17052177D5A300A80BBF /* Build configuration list for PBXNativeTarget "Collabo" */;
 			buildPhases = (
+				2567B84BBA23F407BBCF31CA /* [CP] Check Pods Manifest.lock */,
 				256C16EF2177D5A200A80BBF /* Sources */,
 				256C16F02177D5A200A80BBF /* Frameworks */,
 				256C16F12177D5A200A80BBF /* Resources */,
+				65C69B0951D8F6EB8B55CC7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +185,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2567B84BBA23F407BBCF31CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Collabo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65C69B0951D8F6EB8B55CC7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Collabo/Pods-Collabo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collabo/Pods-Collabo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		256C16EF2177D5A200A80BBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */,
 				256C16F72177D5A200A80BBF /* AppDelegate.swift in Sources */,
+				25F1B58C2177F21B0061DC5F /* Cells.swift in Sources */,
+				25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */,
 				256C17092177D84600A80BBF /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +369,7 @@
 		};
 		256C17062177D5A300A80BBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CFF259034DFE91BC844646A /* Pods-Collabo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +388,7 @@
 		};
 		256C17072177D5A300A80BBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E8F5689BCF9ED75127848C /* Pods-Collabo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
