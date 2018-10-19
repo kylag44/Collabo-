@@ -1,5 +1,5 @@
 //
-//  Cells.swift
+//  UserHeaderFooter.swift
 //  Collabo
 //
 //  Created by Kyla  on 2018-10-17.
