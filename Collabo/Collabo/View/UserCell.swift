@@ -1,50 +1,12 @@
 //
-//  Cells.swift
+//  UserCell.swift
 //  Collabo
 //
-//  Created by Kyla  on 2018-10-17.
+//  Created by Kyla  on 2018-10-19.
 //  Copyright © 2018 Kyla . All rights reserved.
 //
 
 import LBTAComponents
-
-class UserFooter: DatasourceCell {
-  
-  let textLabel: UILabel = {
-    let label = UILabel()
-    label.text = "SHOW ME MORE"
-    label.textColor = UIColor(r: 61, g: 167, b: 244)
-    label.font = UIFont(name: "AvenirNext-Medium", size: 18)
-    return label
-  }()
-  
-  override func setupViews() {
-    super.setupViews()
-    backgroundColor = .white
-    addSubview(textLabel)
-    textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    backgroundColor = .white
-  }
-}
-
-class UserHeader: DatasourceCell {
-  
-  let textLabel: UILabel = {
-    let label = UILabel()
-    label.text = "WHO TO FOLLOW"
-    label.textColor = .black
-    label.font = UIFont(name: "AvenirNext-Medium", size: 22)
-    return label
-  }()
-  
-  override func setupViews() {
-    super.setupViews()
-    backgroundColor = .white
-    addSubview(textLabel)
-    textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    backgroundColor = .white
-  }
-}
 
 class UserCell: DatasourceCell {
   
@@ -52,7 +14,11 @@ class UserCell: DatasourceCell {
   
   override var datasourceItem: Any? {
     didSet {
-//      nameLabel.text = datasourceItem as? String
+      guard let user = datasourceItem as? User else { return }
+      nameLabel.text = user.name
+      userNameLabel.text = user.userName
+      bioTextView.text = user.bioText
+      profileImageView.image = user.profileImage
     }
   }
   
@@ -85,7 +51,7 @@ class UserCell: DatasourceCell {
   
   let bioTextView: UITextView = {
     let textView = UITextView()
-    textView.text = "Hey, this is my twitter like layout view that I'm testing out right now! Looks good, don't it?!🍔🍟"
+    textView.text = "WHOOOOOOOOOO MEEEEE"
     textView.backgroundColor = .clear
     textView.textColor = .black
     textView.font = UIFont(name: "AvenirNext-Regular", size: 16)
@@ -112,6 +78,9 @@ class UserCell: DatasourceCell {
     super.setupViews()
     backgroundColor = .white
     
+    separatorLineView.isHidden = false
+    separatorLineView.backgroundColor = .gray
+    
     addSubview(profileImageView)
     addSubview(nameLabel)
     addSubview(userNameLabel)
@@ -123,7 +92,7 @@ class UserCell: DatasourceCell {
     nameLabel.anchor(profileImageView.topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: followButton.leftAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
     
     userNameLabel.anchor(nameLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
-
+    
     bioTextView.anchor(userNameLabel.bottomAnchor, left: userNameLabel.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: -4, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     
     followButton.anchor(topAnchor, left: nil, bottom: nil, right: self.rightAnchor, topConstant: 12, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 120, heightConstant: 34)

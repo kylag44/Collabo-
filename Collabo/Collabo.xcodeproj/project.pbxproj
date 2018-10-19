@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25656D34217A8CA700BBA48D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25656D33217A8CA700BBA48D /* Users.swift */; };
+		25656D36217A941C00BBA48D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25656D35217A941C00BBA48D /* UserCell.swift */; };
 		256C16F72177D5A200A80BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C16F62177D5A200A80BBF /* AppDelegate.swift */; };
 		256C16FE2177D5A300A80BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FD2177D5A300A80BBF /* Assets.xcassets */; };
 		256C17012177D5A300A80BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FF2177D5A300A80BBF /* LaunchScreen.storyboard */; };
 		256C17092177D84600A80BBF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C17082177D84600A80BBF /* HomeController.swift */; };
 		25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */; };
-		25F1B58C2177F21B0061DC5F /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58B2177F21B0061DC5F /* Cells.swift */; };
+		25F1B58C2177F21B0061DC5F /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58B2177F21B0061DC5F /* UserHeaderFooter.swift */; };
 		25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */; };
 		88A17BA366314E8244F36439 /* Pods_Collabo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7A372BA4FAEE5F8AEE588 /* Pods_Collabo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25656D33217A8CA700BBA48D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		25656D35217A941C00BBA48D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		256C16F32177D5A200A80BBF /* Collabo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collabo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		256C16F62177D5A200A80BBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		256C16FD2177D5A300A80BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		256C17022177D5A300A80BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		256C17082177D84600A80BBF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
-		25F1B58B2177F21B0061DC5F /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		25F1B58B2177F21B0061DC5F /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		59E8F5689BCF9ED75127848C /* Pods-Collabo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collabo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Collabo/Pods-Collabo.release.xcconfig"; sourceTree = "<group>"; };
 		7CFF259034DFE91BC844646A /* Pods-Collabo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collabo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Collabo/Pods-Collabo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			children = (
 				256C16F62177D5A200A80BBF /* AppDelegate.swift */,
 				25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */,
+				25656D33217A8CA700BBA48D /* Users.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,7 +92,8 @@
 		25F1B5892177F1990061DC5F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				25F1B58B2177F21B0061DC5F /* Cells.swift */,
+				25F1B58B2177F21B0061DC5F /* UserHeaderFooter.swift */,
+				25656D35217A941C00BBA48D /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,9 +237,11 @@
 			files = (
 				25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */,
 				256C16F72177D5A200A80BBF /* AppDelegate.swift in Sources */,
-				25F1B58C2177F21B0061DC5F /* Cells.swift in Sources */,
+				25F1B58C2177F21B0061DC5F /* UserHeaderFooter.swift in Sources */,
 				25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */,
+				25656D34217A8CA700BBA48D /* Users.swift in Sources */,
 				256C17092177D84600A80BBF /* HomeController.swift in Sources */,
+				25656D36217A941C00BBA48D /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
