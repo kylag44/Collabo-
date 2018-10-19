@@ -68,8 +68,8 @@
 				25F1B5882177F1910061DC5F /* Model */,
 				25F1B58A2177F19F0061DC5F /* Controller */,
 				25F1B5892177F1990061DC5F /* View */,
-				256C16FD2177D5A300A80BBF /* Assets.xcassets */,
 				256C16FF2177D5A300A80BBF /* LaunchScreen.storyboard */,
+				256C16FD2177D5A300A80BBF /* Assets.xcassets */,
 				256C17022177D5A300A80BBF /* Info.plist */,
 			);
 			path = Collabo;
