@@ -13,6 +13,7 @@
 		256C16FE2177D5A300A80BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FD2177D5A300A80BBF /* Assets.xcassets */; };
 		256C17012177D5A300A80BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256C16FF2177D5A300A80BBF /* LaunchScreen.storyboard */; };
 		256C17092177D84600A80BBF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C17082177D84600A80BBF /* HomeController.swift */; };
+		25E30074217B8D29003A57D3 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E30073217B8D29003A57D3 /* HomeDatasourceController+navbar.swift */; };
 		25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */; };
 		25F1B58C2177F21B0061DC5F /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58B2177F21B0061DC5F /* UserHeaderFooter.swift */; };
 		25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */; };
@@ -28,6 +29,7 @@
 		256C17002177D5A300A80BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		256C17022177D5A300A80BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		256C17082177D84600A80BBF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		25E30073217B8D29003A57D3 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		25F1B58B2177F21B0061DC5F /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				256C17082177D84600A80BBF /* HomeController.swift */,
 				25F1B5862177E91D0061DC5F /* HomeDatasourceController.swift */,
+				25E30073217B8D29003A57D3 /* HomeDatasourceController+navbar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				25F1B58C2177F21B0061DC5F /* UserHeaderFooter.swift in Sources */,
 				25F1B5872177E91D0061DC5F /* HomeDatasourceController.swift in Sources */,
 				25656D34217A8CA700BBA48D /* Users.swift in Sources */,
+				25E30074217B8D29003A57D3 /* HomeDatasourceController+navbar.swift in Sources */,
 				256C17092177D84600A80BBF /* HomeController.swift in Sources */,
 				25656D36217A941C00BBA48D /* UserCell.swift in Sources */,
 			);
