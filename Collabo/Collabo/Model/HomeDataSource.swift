@@ -18,7 +18,13 @@ class HomeDatasource: Datasource {
     return [kylaUser, doggyUser, pikaPupUser]
   }()
 
-  let tweets = ["tweet1", "tweet2"]
+  let tweets: [Tweet] = {
+    let kylaUser = User(name: "Kyla Georgievski", userName: "@kylag44", bioText: "Hey, this is my twitter like layout view that I'm testing out right now! Looks good, don't it?!I'm going to make this cell extra large so I can test out my dynamic cell sizing!!! Does it work? How does this look now? Are we getting dynamic sizing?🍔🍟", profileImage: UIImage(named: "profile_image")!)
+    let tweet = Tweet(user: kylaUser, message: "This is just some text to test that the message text is being shown. I will make it nice and long because I really need a nice and long text block to render out for all these testing purposes. One more run on sentence should do the trick, I really would like this to work!☺️")
+    let tweet2 = Tweet(user: kylaUser, message: "Needed some smaller text!")
+    let tweet3 = Tweet(user: kylaUser, message: "I need a medium amount of text to test out this one. Maybe just a few more words should do the trick!")
+    return [tweet, tweet2, tweet3]
+  }()
   
   override func footerClasses() -> [DatasourceCell.Type]? {
     return [UserFooter.self]
@@ -33,6 +39,9 @@ class HomeDatasource: Datasource {
   }
   
   override func item(_ indexPath: IndexPath) -> Any? {
+    if indexPath.section == 1 {
+      return tweets[indexPath.item]
+    }
     return users[indexPath.item]
   }
   

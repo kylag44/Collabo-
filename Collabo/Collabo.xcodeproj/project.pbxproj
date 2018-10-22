@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25460D35217E345100503F28 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25460D34217E345100503F28 /* TweetCell.swift */; };
+		25460D37217E3B4800503F28 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25460D36217E3B4800503F28 /* Tweet.swift */; };
 		25656D34217A8CA700BBA48D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25656D33217A8CA700BBA48D /* Users.swift */; };
 		25656D36217A941C00BBA48D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25656D35217A941C00BBA48D /* UserCell.swift */; };
 		256C16F72177D5A200A80BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C16F62177D5A200A80BBF /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		25460D34217E345100503F28 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		25460D36217E3B4800503F28 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		25656D33217A8CA700BBA48D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		25656D35217A941C00BBA48D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		256C16F32177D5A200A80BBF /* Collabo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collabo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				256C16F62177D5A200A80BBF /* AppDelegate.swift */,
 				25F1B58D2177F27D0061DC5F /* HomeDataSource.swift */,
 				25656D33217A8CA700BBA48D /* Users.swift */,
+				25460D36217E3B4800503F28 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25F1B58E2177F27D0061DC5F /* HomeDataSource.swift in Sources */,
+				25460D37217E3B4800503F28 /* Tweet.swift in Sources */,
 				256C16F72177D5A200A80BBF /* AppDelegate.swift in Sources */,
 				25F1B58C2177F21B0061DC5F /* UserHeaderFooter.swift in Sources */,
 				25460D35217E345100503F28 /* TweetCell.swift in Sources */,
