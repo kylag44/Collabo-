@@ -24,10 +24,16 @@ class UserFooter: DatasourceCell {
     separatorLineView.isHidden = false
     separatorLineView.backgroundColor = .gray
     
-    backgroundColor = .white
+    let whiteBackgroundView = UIView()
+    whiteBackgroundView.backgroundColor = .white
+    
+    addSubview(whiteBackgroundView)
     addSubview(textLabel)
-    textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    backgroundColor = .white
+    
+    whiteBackgroundView.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+    
+    ///set the bottom constant to 14 to give a little background buffer
+    textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
   }
 }
 

@@ -25,6 +25,13 @@ extension HomeDatasourceController {
     
     navigationController?.navigationBar.backgroundColor = .white
     navigationController?.navigationBar.isTranslucent = false
+    
+    ///this replaces the line between the header and nav bar with nothing
+//    navigationController?.navigationBar.shadowImage = UIImage()
+//    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//    let navBarSeperatorView = UIView()
+//    navBarSeperatorView.backgroundColor = .gray
+//    navBarSeperatorView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
   }
   
   private func setUpLeftNavItems() {
@@ -49,9 +56,9 @@ extension HomeDatasourceController {
     navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: composeButton), UIBarButtonItem(customView: searchButton)]
   }
   
-  ///this funcion will get rid of my darkGray buffer between cells
-  //  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-  //    return 0
-  //  }
+/////this funcion will get rid of my darkGray buffer between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+      return 0
+    }
   
 }
