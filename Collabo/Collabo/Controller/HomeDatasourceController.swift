@@ -10,6 +10,11 @@ import LBTAComponents
 
 
 class HomeDatasourceController: DatasourceController {
+  
+  override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    collectionViewLayout.invalidateLayout()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

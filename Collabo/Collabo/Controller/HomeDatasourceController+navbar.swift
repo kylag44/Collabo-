@@ -49,7 +49,7 @@ extension HomeDatasourceController {
     searchButton.contentMode = .scaleAspectFit
     
     let composeButton = UIButton(type: .system)
-    composeButton.setImage(UIImage(named: "writeIcon")?.withRenderingMode(.alwaysOriginal), for: .normal)
+    composeButton.setImage(UIImage(named: "writeGrayIcon")?.withRenderingMode(.alwaysOriginal), for: .normal)
     composeButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
     composeButton.contentMode = .scaleAspectFit
     
