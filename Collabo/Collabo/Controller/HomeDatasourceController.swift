@@ -12,6 +12,17 @@ import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
   
+  let errorMessageLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Woops! Sorry, something went wrong. Please try again later...."
+    label.textAlignment = .center
+    label.numberOfLines = 0
+    label.textColor = UIColor(r: 61, g: 167, b: 244)
+    label.font = UIFont(name: "AvenirNext-Regular", size: 22)
+    label.isHidden = true
+    return label
+  }()
+  
   override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
     collectionViewLayout.invalidateLayout()
   }
@@ -19,11 +30,25 @@ class HomeDatasourceController: DatasourceController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    view.addSubview(errorMessageLabel)
+    errorMessageLabel.fillSuperview()
+    
     collectionView.backgroundColor = .darkGray 
     
     setUpNavigationBarItems()
+    
+    Service.sharedInstance.fetchHomeFeed { (homeDatasource, err) in
+      if let _ = err {
+        self.errorMessageLabel.isHidden = false
+        
+        if let apiError = err as? APIError<Service.JSONError> {
+          if apiError.response?.statusCode != 200 {
+            self.errorMessageLabel.text = "Woops! No Connection, please try again later..."
+          }
+        }
 
-    Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
+        return
+      }
       self.datasource = homeDatasource
     }
     

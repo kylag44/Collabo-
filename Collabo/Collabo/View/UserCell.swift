@@ -45,7 +45,7 @@ class UserCell: DatasourceCell {
     label.text = "@kylag44"
     label.backgroundColor = .white
     label.textColor = UIColor(r: 61, g: 167, b: 244)
-    label.font = UIFont(name: "AvenirNext- Regular", size: 16)
+    label.font = UIFont(name: "AvenirNext-Regular", size: 16)
     return label
   }()
   
