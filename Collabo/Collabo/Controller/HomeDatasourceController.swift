@@ -56,23 +56,44 @@ class HomeDatasourceController: DatasourceController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    if let user = self.datasource?.item(indexPath) as? User {
-      //      user.bioText
-      ///getting an estimation for the height of the cell based on bioText
-      ///i am subtracting 12 because that is the padding from the left side and 50 is the size of the profileImageView. minus 12 because there is a little gap between the profileImage and the red bioTextFields background. I changed the background from clear to red to do this estimation and will change it back to clear after. Minus 2 so it works across all device sizes
-      let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
-      ///height needs to be set to arbitrarily large value
-      let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
-      ///use the font and size from bioTextView 
-      let attributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 16)]
-      let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+    ///first section of users
+    if indexPath.section == 0 {
+      guard let user = self.datasource?.item(indexPath) as?  User else { return .zero }
       
-      ///plus 52 because name label and user label are both 20. 20+20 = 40 and then plus 12 because that is what the top constant is 40+12=52. plus another 14 because the textField inherintly needs height 52+14=66
-      return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
-    }
+//      if let user = self.datasource?.item(indexPath) as? User {
+//        //      user.bioText
+//        ///getting an estimation for the height of the cell based on bioText
+//        ///i am subtracting 12 because that is the padding from the left side and 50 is the size of the profileImageView. minus 12 because there is a little gap between the profileImage and the red bioTextFields background. I changed the background from clear to red to do this estimation and will change it back to clear after. Minus 2 so it works across all device sizes
+//        let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
+//        ///height needs to be set to arbitrarily large value
+//        let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+//        ///use the font and size from bioTextView
+//        let attributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 16)]
+//        let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+//
+//        ///plus 52 because name label and user label are both 20. 20+20 = 40 and then plus 12 because that is what the top constant is 40+12=52. plus another 14 because the textField inherintly needs height 52+14=66
+        let estimatedHeight = estimatedHeightForText(user.bioText)
+        return CGSize(width: view.frame.width, height: estimatedHeight + 66)
+    } else if indexPath.section == 1 {
+      ///tweets cell size estimation
+      guard let tweet = datasource?.item(indexPath) as? Tweet else { return .zero }
+      
+      let estimatedHeight = estimatedHeightForText(tweet.message)
     
+      return CGSize(width: view.frame.width, height: estimatedHeight + 74)
+    }
     return CGSize(width: view.frame.width, height: 200)
+  }
+  
+  private func estimatedHeightForText(_ text: String) -> CGFloat {
+    let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
+    
+    let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+    
+    let attributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 16)]
+    let estimatedFrame = NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+    
+    return estimatedFrame.height
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

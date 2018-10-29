@@ -18,12 +18,13 @@ class UserCell: DatasourceCell {
       nameLabel.text = user.name
       userNameLabel.text = user.userName
       bioTextView.text = user.bioText
-      profileImageView.image = user.profileImage
+   
+      profileImageView.loadImage(urlString: user.profileImageUrl)
     }
   }
   
-  let profileImageView: UIImageView = {
-    let imageView = UIImageView()
+  let profileImageView: CachedImageView = {
+    let imageView = CachedImageView()
     imageView.image = UIImage(named: "profile_image")
     imageView.layer.cornerRadius = 5
     imageView.layer.masksToBounds = true

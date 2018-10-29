@@ -14,6 +14,8 @@ class TweetCell: DatasourceCell {
     didSet {
       guard let tweet = datasourceItem as? Tweet else { return }
       
+      profileImageView.loadImage(urlString: tweet.user.profileImageUrl)
+      
       let attributedText = NSMutableAttributedString(string: tweet.user.name, attributes: [NSAttributedString.Key.font: UIFont(name:  "AvenirNext-Bold", size: 18) as Any])
       
       let twitterBlue = UIColor(r: 61, g: 167, b: 244)
@@ -42,8 +44,8 @@ class TweetCell: DatasourceCell {
     return tv
   }()
   
-  let profileImageView: UIImageView = {
-    let imageView = UIImageView()
+  let profileImageView: CachedImageView = {
+    let imageView = CachedImageView()
     imageView.image = UIImage(named: "profile_image")
     imageView.layer.cornerRadius = 5
     imageView.layer.masksToBounds = true
